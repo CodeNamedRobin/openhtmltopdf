@@ -278,7 +278,7 @@ public abstract class AbstractOutputDevice implements OutputDevice {
                     borderEdge.width + 2 * spread,
                     borderEdge.height + 2 * spread);
 
-            Shape shadowShape = BorderPainter.generateBorderBounds(shadowBounds, border, true);
+            Shape shadowShape = BorderPainter.generateBorderBounds(shadowBounds, border, false);
 
             setColor(shadow.getColor());
             fill(shadowShape);

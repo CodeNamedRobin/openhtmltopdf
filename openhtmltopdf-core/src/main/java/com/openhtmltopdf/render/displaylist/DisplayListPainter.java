@@ -73,7 +73,9 @@ public class DisplayListPainter {
 				
 				updateTableHeaderFooterPosition(c, box);
 				debugOnly("painting bg", box);
-				box.paintBoxShadow(c);
+				if (box.getLayer() == null) {
+					box.paintBoxShadow(c);
+				}
 				box.paintBackground(c);
 				box.paintBorder(c);
 
